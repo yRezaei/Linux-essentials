@@ -25,3 +25,4 @@ sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode s
 # NVIDIA driver repository
 sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt update
+sudo apt-get install nvidia-384 nvidia-384-dev -y

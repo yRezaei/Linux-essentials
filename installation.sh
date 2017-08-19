@@ -29,20 +29,29 @@ sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode s
 sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt update
 
-# Glew OpenGL wrraper
+# Glew - The OpenGL Extension Wrangler Library
 cd ~/Downloads
 git clone https://github.com/nigels-com/glew.git glew
 cd glew
 make extensions
 make
 sudo make install
-rm -rf glew
+cd && rm -rf ~/Downloads/glew
 
-# GLM math library
+# GLM - OpenGL Mathematics
 cd ~/Downloads
 git clone https://github.com/g-truc/glm.git glm
 cd glm
 cmake .
 make
 sudo make install
-rm -rf glm
+cd && rm -rf ~/Downloads/glm
+
+# SDL - Simple DirectMedia Layer
+cd ~/Downloads
+git clone https://github.com/SDL-mirror/SDL.git sdl
+cd sdl
+./configure
+make
+sudo make install
+cd && rm -rf ~/Downloads/sdl

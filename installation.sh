@@ -5,7 +5,10 @@ sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y
 sudo apt-get install build-essential ubuntu-restricted-extras -y
 
 # Few useful applications
-sudo apt-get install vim cmake terminator mesa-utils -y
+sudo apt-get install vim cmake terminator -y
+
+# OpenGL related packages
+sudo apt-get install mesa-utils libxmu-dev libxi-dev libgl-dev libosmesa-dev -y
 
 # Modifying the username & path appearance in bash
 echo 'export PS1="\[\033[38;5;190m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;45m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;190m\]>\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"' >> ~/.bashrc
@@ -25,3 +28,21 @@ sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode s
 # NVIDIA driver repository
 sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt update
+
+# Glew OpenGL wrraper
+cd ~/Downloads
+git clone https://github.com/nigels-com/glew.git glew
+cd glew
+make extensions
+make
+sudo make install
+rm -rf glew
+
+# GLM math library
+cd ~/Downloads
+git clone https://github.com/g-truc/glm.git glm
+cd glm
+cmake .
+make
+sudo make install
+rm -rf glm

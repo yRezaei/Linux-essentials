@@ -5,7 +5,7 @@ sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y
 sudo apt-get install build-essential ubuntu-restricted-extras -y
 
 # Few useful applications
-sudo apt-get install vim cmake terminator -y
+sudo apt-get install vim cmake terminator mesa-utils -y
 
 # Modifying the username & path appearance in bash
 echo 'export PS1="\[\033[38;5;190m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;45m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;190m\]>\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"' >> ~/.bashrc
@@ -25,4 +25,3 @@ sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode s
 # NVIDIA driver repository
 sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt update
-sudo apt-get install nvidia-384 nvidia-384-dev -y

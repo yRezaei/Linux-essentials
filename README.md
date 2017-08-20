@@ -15,10 +15,10 @@ echo 'export PS1="\[\033[38;5;190m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput
 source ~/.bashrc
 
 # Google chrome repository
-wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/googlechrome.list'
-sudo apt-get update
-sudo apt-get install google-chrome-stable
+1. wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+2. sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/googlechrome.list'
+3. sudo apt-get update
+4. sudo apt-get install google-chrome-stable
 
 # Visual studio code repository
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
@@ -59,11 +59,11 @@ sudo make install
 cd && rm -rf ~/Downloads/sdl
 
 # Install Anaconda continume
-cd ~/Downloads
-wget -O Anaconda.sh https://repo.continuum.io/archive/Anaconda3-4.4.0-Linux-x86_64.sh
-bash Anaconda.sh -b -p ~/anaconda
-rm Anaconda.sh
-echo 'export PATH="~/anaconda/bin:$PATH"' >> ~/.bashrc 
+1. cd ~/Downloads
+2. wget -O Anaconda.sh https://repo.continuum.io/archive/Anaconda3-4.4.0-Linux-x86_64.sh
+3. bash Anaconda.sh -b -p ~/anaconda
+4. rm Anaconda.sh
+5. echo 'export PATH="~/anaconda/bin:$PATH"' >> ~/.bashrc 
 source .bashrc
 conda update conda
 

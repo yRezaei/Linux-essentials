@@ -86,13 +86,11 @@ cd && rm -rf ~/Downloads/sdl
 
 cd ~/Downloads
 
-wget -O Anaconda.sh https://repo.continuum.io/archive/Anaconda3-4.4.0-Linux-x86_64.sh
+wget https://repo.continuum.io/archive/Anaconda3-4.4.0-Linux-x86_64.sh
 
-bash Anaconda.sh -b -p ~/anaconda
+bash Anaconda3-4.4.0-Linux-x86_64.sh
 
-rm Anaconda.sh
-
-echo 'export PATH="~/anaconda/bin:$PATH"' >> ~/.bashrc 
+rm Anaconda3-4.4.0-Linux-x86_64.sh 
 
 source ~/.bashrc
 

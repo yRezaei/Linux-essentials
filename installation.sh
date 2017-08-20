@@ -57,3 +57,12 @@ cd sdl
 make
 sudo make install
 cd && rm -rf ~/Downloads/sdl
+
+# Install Anaconda continume
+cd ~/Downloads
+wget -O Anaconda.sh https://repo.continuum.io/archive/Anaconda3-4.4.0-Linux-x86_64.sh
+bash Anaconda.sh -b -p ~/anaconda
+rm Anaconda.sh
+echo 'export PATH="~/anaconda/bin:$PATH"' >> ~/.bashrc 
+source .bashrc
+conda update conda

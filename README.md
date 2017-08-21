@@ -57,6 +57,8 @@ make
 
 sudo make install
 
+sudo ln -s /usr/lib64/libGLEW.so.2.1 /usr/local/lib/libGLEW.so.2.1
+
 cd && rm -rf ~/Downloads/glew
 
 # GLM - OpenGL Mathematics

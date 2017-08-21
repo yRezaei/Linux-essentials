@@ -1,5 +1,9 @@
 # Updating the system
-sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y
+sudo apt-get update
+
+sudo apt-get upgrade -y
+
+sudo apt-get dist-upgrade -y
 
 # Installing the necessary packages for development 
 sudo apt-get install build-essential ubuntu-restricted-extras -y
@@ -12,6 +16,7 @@ sudo apt-get install mesa-utils libxmu-dev libxi-dev libgl-dev libosmesa-dev -y
 
 # Modifying the username & path appearance in bash
 echo 'export PS1="\[\033[38;5;190m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;45m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;190m\]>\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"' >> ~/.bashrc
+
 source ~/.bashrc
 
 # Google chrome repository

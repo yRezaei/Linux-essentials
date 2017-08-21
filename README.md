@@ -81,7 +81,9 @@ sudo make install
 cd && rm -rf ~/Downloads/glm
 
 # SDL - Simple DirectMedia Layer
-cd ~/Downloadsgit clone https://github.com/SDL-mirror/SDL.git sdl
+cd ~/Downloads
+
+git clone https://github.com/SDL-mirror/SDL.git sdl
 
 cd sdl
 

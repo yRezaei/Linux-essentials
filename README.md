@@ -9,13 +9,13 @@ sudo apt-get dist-upgrade -y
 sudo apt-get install build-essential ubuntu-restricted-extras -y
 
 # Few useful applications
-sudo apt-get install vim cmake terminator -y
+sudo apt-get install vim cmake git git-core terminator mercurial -y
 
 # OpenGL related packages
 sudo apt-get install mesa-utils libxmu-dev libxi-dev libgl-dev libosmesa-dev -y
 
-# Modifying the username & path appearance in bash
-echo 'export PS1="\[\033[38;5;190m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;45m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;190m\]>\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"' >> ~/.bashrc
+# Customizing the username & path appearance in bash
+export PS1="\[\033[38;5;226m\]\u\[$(tput sgr0)\]\[\033[38;5;45m\]@\[$(tput sgr0)\]\[\033[38;5;226m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;39m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]\n \[$(tput sgr0)\]\[\033[38;5;226m\]->\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
 
 source ~/.bashrc
 

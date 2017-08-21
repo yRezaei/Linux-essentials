@@ -99,4 +99,5 @@ conda update conda
 
 # Latex
 sudo apt-get install texlive-full -y
+
 sudo apt-get install texstudio -y

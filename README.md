@@ -44,6 +44,10 @@ sudo add-apt-repository ppa:graphics-drivers/ppa
 
 sudo apt update
 
+# TBB - Threading Building Blocks
+sudo apt-get install libtbb-dev
+
+
 # Glew - The OpenGL Extension Wrangler Library
 cd ~/Downloads
 
@@ -102,7 +106,6 @@ rm Anaconda3-4.4.0-Linux-x86_64.sh
 source ~/.bashrc
 
 conda update conda
-
 
 # Latex
 sudo apt-get install texlive-full -y

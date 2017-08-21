@@ -108,3 +108,14 @@ conda update conda
 sudo apt-get install texlive-full -y
 
 sudo apt-get install texstudio -y
+
+# Eigen - C++ template library for linear algebra
+cd ~/Downloads
+
+hg clone https://bitbucket.org/eigen/eigen/
+
+cd eigen && mkdir build && cd build && cmake ..
+
+sudo make install
+
+cd && rm -rf ~/Downloads/eigen

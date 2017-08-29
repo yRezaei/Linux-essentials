@@ -124,3 +124,8 @@ cd eigen && mkdir build && cd build && cmake ..
 sudo make install
 
 cd && rm -rf ~/Downloads/eigen
+
+# Java
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java8-installer

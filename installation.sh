@@ -9,13 +9,13 @@ sudo apt-get dist-upgrade -y
 sudo apt-get install build-essential ubuntu-restricted-extras -y
 
 # Few useful applications
-sudo apt-get install vim cmake terminator -y
+sudo apt-get install vim cmake git git-core terminator mercurial -y
 
 # OpenGL related packages
 sudo apt-get install mesa-utils libxmu-dev libxi-dev libgl-dev libosmesa-dev -y
 
-# Modifying the username & path appearance in bash
-echo 'export PS1="\[\033[38;5;190m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;45m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;190m\]>\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"' >> ~/.bashrc
+# Customizing the username & path appearance in bash
+echo 'export PS1="\[\033[38;5;226m\]\u\[$(tput sgr0)\]\[\033[38;5;45m\]@\[$(tput sgr0)\]\[\033[38;5;226m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;45m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]\n \[$(tput sgr0)\]\[\033[38;5;45m\]>\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"' >> ~/.bashrc
 
 source ~/.bashrc
 
@@ -44,6 +44,10 @@ sudo add-apt-repository ppa:graphics-drivers/ppa
 
 sudo apt update
 
+# TBB - Threading Building Blocks
+sudo apt-get install libtbb-dev
+
+
 # Glew - The OpenGL Extension Wrangler Library
 cd ~/Downloads
 
@@ -56,6 +60,8 @@ make extensions
 make
 
 sudo make install
+
+sudo ln -s /usr/lib64/libGLEW.so.2.1 /usr/local/lib/libGLEW.so.2.1
 
 cd && rm -rf ~/Downloads/glew
 
@@ -75,7 +81,9 @@ sudo make install
 cd && rm -rf ~/Downloads/glm
 
 # SDL - Simple DirectMedia Layer
-cd ~/Downloadsgit clone https://github.com/SDL-mirror/SDL.git sdl
+cd ~/Downloads
+
+git clone https://github.com/SDL-mirror/SDL.git sdl
 
 cd sdl
 
@@ -101,8 +109,23 @@ source ~/.bashrc
 
 conda update conda
 
-
 # Latex
 sudo apt-get install texlive-full -y
 
 sudo apt-get install texstudio -y
+
+# Eigen - C++ template library for linear algebra
+cd ~/Downloads
+
+hg clone https://bitbucket.org/eigen/eigen/
+
+cd eigen && mkdir build && cd build && cmake ..
+
+sudo make install
+
+cd && rm -rf ~/Downloads/eigen
+
+# Java
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java8-installer

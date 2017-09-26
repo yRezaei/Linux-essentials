@@ -15,7 +15,7 @@ sudo apt-get install vim cmake git git-core terminator mercurial -y
 sudo apt-get install mesa-utils libxmu-dev libxi-dev libgl-dev libosmesa-dev -y
 
 # Customizing the username & path appearance in bash
-echo 'export PS1="\033[38;5;226m\u\033[38;5;45m@\033[38;5;226m\h \033[38;5;45m\w\n \033[38;5;45m>\033[m "' >> ~/.bashrc
+echo 'export PS1="\[\e[38;5;184m\]\u\[\e[38;5;44m\]@\[\e[38;5;184m\]\h \[\e[38;5;44m\]\w \[\e[38;5;255m\]>\[\e[00m\] "' >> ~/.bashrc
 
 source ~/.bashrc
 

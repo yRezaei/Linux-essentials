@@ -1,5 +1,5 @@
 # Updating the system
-sudo apt update && sudo apt upgrade dist-upgrade -y
+sudo apt update && sudo apt upgrade sudo apt dist-upgrade -y
 
 # Installing the necessary packages for development 
 sudo apt-get install build-essential ubuntu-restricted-extras -y

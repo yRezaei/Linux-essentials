@@ -112,11 +112,11 @@ printf "${Yellow}\n#############################################################
 printf "${Green}                       ZeroMQ (Distributed Messaging)"
 printf "${Yellow}\n#########################################################################"
 printf "${No_color}\n" && sleep 1
-cd ~/Downloads && \
 git clone https://github.com/zeromq/libzmq.git libzmq  && \
 cd libzmq && ./autogen.sh && ./configure && make && sudo make install && sudo ldconfig && \
-cd .. && rm -rf libzmq  &&  git clone https://github.com/zeromq/cppzmq.git cppzmq && \
-cd cppzmq && mkdir build && cd build && cmake .. && sudo make -j4 install &&  cd && rm -rf ~/Downloads/cppzmq
+cd .. && rm -rf libzmq \
+&&  git clone https://github.com/zeromq/cppzmq.git cppzmq && \
+cd cppzmq && mkdir build && cd build && cmake .. && sudo make -j4 install && cd .. && rm -rf cppzmq
 printf "${Green}Donn.\n${No_color}"
 
 # TBB (Threading Building Blocks)
